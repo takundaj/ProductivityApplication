@@ -43,7 +43,12 @@
 		D440630525B0AD15003A8F6A /* JournalHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440630425B0AD15003A8F6A /* JournalHomeTableViewCell.swift */; };
 		D440630725B1B345003A8F6A /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440630625B1B345003A8F6A /* NewEntryViewController.swift */; };
 		D440630925B1B96B003A8F6A /* EditEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440630825B1B96B003A8F6A /* EditEntryViewController.swift */; };
-		D465FF252585D33E000DB740 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D465FF242585D33E000DB740 /* EditItemViewController.swift */; };
+		D453D41B25C1A8EC00D56C4E /* EditItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D41A25C1A8EC00D56C4E /* EditItemTableViewController.swift */; };
+		D453D41D25C1F5F900D56C4E /* EditHabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D41C25C1F5F900D56C4E /* EditHabitTableViewController.swift */; };
+		D4903DAB25BF5EF000D7921A /* HabitTrackerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4903DAA25BF5EF000D7921A /* HabitTrackerTableViewController.swift */; };
+		D4903DAD25BF5FBD00D7921A /* HabitTrackerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4903DAC25BF5FBD00D7921A /* HabitTrackerTableViewCell.swift */; };
+		D4903DAF25BF9CB100D7921A /* AddHabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4903DAE25BF9CB100D7921A /* AddHabitTableViewController.swift */; };
+		D4903DB725C1A4F300D7921A /* NewItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4903DB625C1A4F300D7921A /* NewItemTableViewController.swift */; };
 		D4EF7D5B25822E10001370AD /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF7D5A25822E10001370AD /* NewItemViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +92,12 @@
 		D440630425B0AD15003A8F6A /* JournalHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHomeTableViewCell.swift; sourceTree = "<group>"; };
 		D440630625B1B345003A8F6A /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 		D440630825B1B96B003A8F6A /* EditEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryViewController.swift; sourceTree = "<group>"; };
-		D465FF242585D33E000DB740 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
+		D453D41A25C1A8EC00D56C4E /* EditItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemTableViewController.swift; sourceTree = "<group>"; };
+		D453D41C25C1F5F900D56C4E /* EditHabitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitTableViewController.swift; sourceTree = "<group>"; };
+		D4903DAA25BF5EF000D7921A /* HabitTrackerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerTableViewController.swift; sourceTree = "<group>"; };
+		D4903DAC25BF5FBD00D7921A /* HabitTrackerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerTableViewCell.swift; sourceTree = "<group>"; };
+		D4903DAE25BF9CB100D7921A /* AddHabitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitTableViewController.swift; sourceTree = "<group>"; };
+		D4903DB625C1A4F300D7921A /* NewItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemTableViewController.swift; sourceTree = "<group>"; };
 		D4EF7D5A25822E10001370AD /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +137,7 @@
 				D4062C10257F964C005A6884 /* SceneDelegate.swift */,
 				D440630025B0AC34003A8F6A /* To Do Tab */,
 				D440630125B0AC54003A8F6A /* Journal Tab */,
+				D4903DA925BF5E0600D7921A /* Habit tracker */,
 				D4062C14257F964C005A6884 /* Main.storyboard */,
 				D4062C1A257F9650005A6884 /* Assets.xcassets */,
 				D4062C1C257F9650005A6884 /* LaunchScreen.storyboard */,
@@ -205,7 +216,8 @@
 				D4062C25257F98C9005A6884 /* HomeTableViewController.swift */,
 				D4062C2A257F99E7005A6884 /* HomeTableViewCell.swift */,
 				D4EF7D5A25822E10001370AD /* NewItemViewController.swift */,
-				D465FF242585D33E000DB740 /* EditItemViewController.swift */,
+				D4903DB625C1A4F300D7921A /* NewItemTableViewController.swift */,
+				D453D41A25C1A8EC00D56C4E /* EditItemTableViewController.swift */,
 			);
 			path = "To Do Tab";
 			sourceTree = "<group>";
@@ -219,6 +231,17 @@
 				D440630825B1B96B003A8F6A /* EditEntryViewController.swift */,
 			);
 			path = "Journal Tab";
+			sourceTree = "<group>";
+		};
+		D4903DA925BF5E0600D7921A /* Habit tracker */ = {
+			isa = PBXGroup;
+			children = (
+				D4903DAA25BF5EF000D7921A /* HabitTrackerTableViewController.swift */,
+				D4903DAC25BF5FBD00D7921A /* HabitTrackerTableViewCell.swift */,
+				D4903DAE25BF9CB100D7921A /* AddHabitTableViewController.swift */,
+				D453D41C25C1F5F900D56C4E /* EditHabitTableViewController.swift */,
+			);
+			path = "Habit tracker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +317,7 @@
 			files = (
 				D43C92C725B924AE00CF4624 /* IQKeyboardManagerConstants.swift in Sources */,
 				D4062C2B257F99E7005A6884 /* HomeTableViewCell.swift in Sources */,
+				D453D41D25C1F5F900D56C4E /* EditHabitTableViewController.swift in Sources */,
 				D43C92C825B924AE00CF4624 /* IQKeyboardManager+Position.swift in Sources */,
 				D43C92C025B924AE00CF4624 /* IQTitleBarButtonItem.swift in Sources */,
 				D43C92D225B924AE00CF4624 /* IQNSArray+Sort.swift in Sources */,
@@ -302,23 +326,27 @@
 				D43C92D025B924AE00CF4624 /* IQUITextFieldView+Additions.swift in Sources */,
 				D43C92D325B924AE00CF4624 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
 				D43C92C625B924AE00CF4624 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				D4903DAD25BF5FBD00D7921A /* HabitTrackerTableViewCell.swift in Sources */,
 				D43C92C925B924AE00CF4624 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				D4903DAF25BF9CB100D7921A /* AddHabitTableViewController.swift in Sources */,
 				D43C92C125B924AE00CF4624 /* IQBarButtonItem.swift in Sources */,
+				D4903DB725C1A4F300D7921A /* NewItemTableViewController.swift in Sources */,
 				D440630525B0AD15003A8F6A /* JournalHomeTableViewCell.swift in Sources */,
 				D4062C0F257F964C005A6884 /* AppDelegate.swift in Sources */,
 				D440630725B1B345003A8F6A /* NewEntryViewController.swift in Sources */,
 				D43C92CB25B924AE00CF4624 /* IQKeyboardManager+Debug.swift in Sources */,
 				D440630325B0ACA6003A8F6A /* JournalHomeTableViewController.swift in Sources */,
+				D453D41B25C1A8EC00D56C4E /* EditItemTableViewController.swift in Sources */,
 				D43C92CD25B924AE00CF4624 /* IQKeyboardManager+Toolbar.swift in Sources */,
 				D43C92C325B924AE00CF4624 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				D43C92C425B924AE00CF4624 /* IQInvocation.swift in Sources */,
-				D465FF252585D33E000DB740 /* EditItemViewController.swift in Sources */,
 				D440630925B1B96B003A8F6A /* EditEntryViewController.swift in Sources */,
 				D43C92CC25B924AE00CF4624 /* IQKeyboardManager+OrientationNotification.swift in Sources */,
 				D4062C11257F964C005A6884 /* SceneDelegate.swift in Sources */,
 				D43C92D125B924AE00CF4624 /* IQUIView+Hierarchy.swift in Sources */,
 				D4062C19257F964C005A6884 /* ToDoListApp.xcdatamodeld in Sources */,
 				D43C92CF25B924AE00CF4624 /* IQUIViewController+Additions.swift in Sources */,
+				D4903DAB25BF5EF000D7921A /* HabitTrackerTableViewController.swift in Sources */,
 				D43C92BD25B924AE00CF4624 /* IQTextView.swift in Sources */,
 				D43C92CE25B924AE00CF4624 /* IQUIScrollView+Additions.swift in Sources */,
 				D43C92BF25B924AE00CF4624 /* IQPreviousNextView.swift in Sources */,

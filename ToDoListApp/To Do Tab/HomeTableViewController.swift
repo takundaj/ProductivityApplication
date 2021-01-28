@@ -25,6 +25,9 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.link]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
         //Fetch To Do items form core data (will be stored in items array)
         fetchItems()
         
@@ -50,6 +53,10 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
         
         //each time view appears refetch items and reload table view
         fetchItems()
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         
     }
     
@@ -138,14 +145,15 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
         if currentObject.isDone == true {
             
             //Set cell background to light green
-            cell.backgroundColor = UIColor(red: 0.5922, green: 1, blue: 0.5294, alpha: 1.0)
-            cell.accessoryType = .checkmark
+            cell.Statusview.backgroundColor = .green
+            
             
         //if currrent object is NOT "done"
         } else if currentObject.isDone == false {
             
             //Set cell background colur to white
-            cell.backgroundColor = .white
+            cell.Statusview.backgroundColor = .link
+            
             
         }
         
@@ -184,7 +192,7 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
         let doneAction = UIAlertAction(title: doneActionTitle(), style: .default) { (alert:UIAlertAction!) in
             
             //get reference to cell at current index path
-            let cell = tableView.cellForRow(at: indexPath)
+            let cell = tableView.cellForRow(at: indexPath) as! HomeTableViewCell
             
             //get reference to item data at current index path
             let currentObject = self.items[indexPath.row]
@@ -197,8 +205,8 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
                 
                 //change cells colour to GREEN and ADD checkmark accessory view
                 UIView.animate(withDuration: 1.5, animations: {
-                    cell?.accessoryType = .checkmark
-                    cell?.backgroundColor = UIColor(red: 0.5922, green: 1, blue: 0.5294, alpha: 1.0)
+                    
+                    cell.Statusview.backgroundColor = .green
                     
                 })
                 
@@ -212,8 +220,8 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
                 currentObject.isDone = false
                 
                 //change cells colour to WHITE and and REMOVE checkmark accessory view
-                cell?.accessoryType = .none
-                cell?.backgroundColor = .white
+                cell.Statusview.backgroundColor = .link
+                
             }
             
         }
@@ -348,8 +356,8 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
         
         //Edit controller segue preperation
         if segue.identifier == "showEditTodo" {
-            let editViewController = segue.destination as! EditItemViewController
-            editViewController.selectedItem = currentItem
+            let editTableViewController = segue.destination as! EditItemTableViewController
+            editTableViewController.selectedItem = currentItem
         }
         
     }

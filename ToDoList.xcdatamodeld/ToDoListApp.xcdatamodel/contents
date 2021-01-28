@@ -5,6 +5,11 @@
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Habit" representedClassName="Habit" syncable="YES" codeGenerationType="class">
+        <attribute name="goal" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="progress" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -13,6 +18,7 @@
     </entity>
     <elements>
         <element name="Entry" positionX="-36" positionY="36" width="128" height="88"/>
+        <element name="Habit" positionX="-36" positionY="45" width="128" height="88"/>
         <element name="Item" positionX="-36" positionY="9" width="128" height="103"/>
     </elements>
 </model>

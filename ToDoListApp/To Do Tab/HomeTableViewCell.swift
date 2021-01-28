@@ -13,9 +13,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet var itemTitle:UILabel!
     @IBOutlet var itemNotes:UILabel!
     @IBOutlet var dateLabel:UILabel!
-    @IBOutlet weak var completeImage: UIImageView!
-    @IBOutlet weak var incompleteImage: UIImageView!
-    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var Statusview: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
