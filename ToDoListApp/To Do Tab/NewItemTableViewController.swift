@@ -9,24 +9,24 @@
 import UIKit
 
 class NewItemTableViewController: UITableViewController, UITextFieldDelegate {
-
+    
     //MARK:- IBOutlet declarations
     
     @IBOutlet var titleField:UITextField!
     @IBOutlet var bodyField:UITextField!
     @IBOutlet var date:UIDatePicker!
- 
+    
     //MARK:- Lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         titleField.delegate = self
         bodyField.delegate = self
-
+        
         // Do any additional setup after loading the view.
     }
-   
+    
     
     
     //MARK:- Text Field delegate methods
@@ -39,7 +39,7 @@ class NewItemTableViewController: UITableViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
- 
+    
     //MARK:- IBAction methods
     
     @IBAction func didTapSave() {
@@ -56,33 +56,35 @@ class NewItemTableViewController: UITableViewController, UITextFieldDelegate {
             newItem.date = date.date
             
             appDelegate.saveContext()
-        
-        //notification declaration and request/call
-        DispatchQueue.main.async {
-                        let content = UNMutableNotificationContent()
+            
+            //notification declaration and request/call
+            
+            
+            let content = UNMutableNotificationContent()
+            
             content.title = self.titleField.text!
-                    content.sound = .default
+            content.sound = .default
             content.body = self.bodyField.text!
-                    
+            
             let targeData = self.date.date
-                    let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targeData), repeats: false)
-                
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targeData), repeats: false)
+            
             let request = UNNotificationRequest(identifier: "some_long_id", content: content , trigger: trigger)
             
             UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                 
                 if error != nil {
                     print("Notifcation error")
-                
+                    
                 }
                 
             })///End of userNotificationCentre
             
-        }///End of dispatchques
-        
-        // return to/present home view controller after save is complete
-        navigationController?.popViewController(animated: true)
-        
+            
+            // return to/present home view controller after save is complete
+            navigationController?.popViewController(animated: true)
+            
         } else {
             
             let emptyFieldAlert = UIAlertController(title: "Empty Fields", message: "Please fill in all fields to save item", preferredStyle: .alert)
@@ -92,8 +94,8 @@ class NewItemTableViewController: UITableViewController, UITextFieldDelegate {
             present(emptyFieldAlert, animated: true)
             
         }
-            
-        }///end of didTapSave
+        
+    }///end of didTapSave
     
-
+    
 }
