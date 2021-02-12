@@ -49,7 +49,6 @@
 		D4903DAD25BF5FBD00D7921A /* HabitTrackerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4903DAC25BF5FBD00D7921A /* HabitTrackerTableViewCell.swift */; };
 		D4903DAF25BF9CB100D7921A /* AddHabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4903DAE25BF9CB100D7921A /* AddHabitTableViewController.swift */; };
 		D4903DB725C1A4F300D7921A /* NewItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4903DB625C1A4F300D7921A /* NewItemTableViewController.swift */; };
-		D4EF7D5B25822E10001370AD /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF7D5A25822E10001370AD /* NewItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,7 +97,6 @@
 		D4903DAC25BF5FBD00D7921A /* HabitTrackerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerTableViewCell.swift; sourceTree = "<group>"; };
 		D4903DAE25BF9CB100D7921A /* AddHabitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitTableViewController.swift; sourceTree = "<group>"; };
 		D4903DB625C1A4F300D7921A /* NewItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemTableViewController.swift; sourceTree = "<group>"; };
-		D4EF7D5A25822E10001370AD /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +213,6 @@
 			children = (
 				D4062C25257F98C9005A6884 /* HomeTableViewController.swift */,
 				D4062C2A257F99E7005A6884 /* HomeTableViewCell.swift */,
-				D4EF7D5A25822E10001370AD /* NewItemViewController.swift */,
 				D4903DB625C1A4F300D7921A /* NewItemTableViewController.swift */,
 				D453D41A25C1A8EC00D56C4E /* EditItemTableViewController.swift */,
 			);
@@ -353,7 +350,6 @@
 				D4062C29257F990A005A6884 /* ToDoList.xcdatamodeld in Sources */,
 				D43C92C525B924AE00CF4624 /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				D43C92BE25B924AE00CF4624 /* IQKeyboardManager+Internal.swift in Sources */,
-				D4EF7D5B25822E10001370AD /* NewItemViewController.swift in Sources */,
 				D43C92C225B924AE00CF4624 /* IQToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

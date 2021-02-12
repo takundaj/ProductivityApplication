@@ -25,6 +25,8 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let editVC = storyboard?.instantiateViewController(identifier: "NewItemVC") as! NewItemTableViewController
+        
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.link]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
@@ -51,10 +53,10 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
     //MARK: view will appear
     override func viewWillAppear(_ animated: Bool) {
         
-        //each time view appears refetch items and reload table view
-        fetchItems()
-        
         DispatchQueue.main.async {
+            
+            //each time view appears refetch items and reload table view
+            self.fetchItems()
             self.tableView.reloadData()
         }
         
@@ -64,6 +66,16 @@ class HomeTableViewController: UITableViewController, NSFetchedResultsController
     //MARK:- Varibale declarations
     
     var currentItem:Item?
+    
+    func refreshDisplayedItems() {
+        
+        fetchItems()
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     
     
     //MARK:- Functions declarations

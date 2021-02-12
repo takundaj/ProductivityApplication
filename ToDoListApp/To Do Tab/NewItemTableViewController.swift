@@ -16,6 +16,7 @@ class NewItemTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet var bodyField:UITextField!
     @IBOutlet var date:UIDatePicker!
     
+    
     //MARK:- Lifecycle methods
     
     override func viewDidLoad() {
@@ -51,15 +52,13 @@ class NewItemTableViewController: UITableViewController, UITextFieldDelegate {
             
             let newItem = Item(context: context)
             
-            newItem.title = titleField.text
-            newItem.notes = bodyField.text
-            newItem.date = date.date
+            newItem.title = self.titleField.text
+            newItem.notes = self.bodyField.text
+            newItem.date = self.date.date
             
             appDelegate.saveContext()
             
             //notification declaration and request/call
-            
-            
             let content = UNMutableNotificationContent()
             
             content.title = self.titleField.text!
@@ -71,19 +70,22 @@ class NewItemTableViewController: UITableViewController, UITextFieldDelegate {
             let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targeData), repeats: false)
             
             let request = UNNotificationRequest(identifier: "some_long_id", content: content , trigger: trigger)
-            
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
-                
-                if error != nil {
-                    print("Notifcation error")
+           
+            DispatchQueue.main.async {
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                     
-                }
+                    if error != nil {
+                        print("Notifcation error")
+                        
+                    }
+                    
+                })///End of userNotificationCentre
                 
-            })///End of userNotificationCentre
-            
+                
+            }
             
             // return to/present home view controller after save is complete
-            navigationController?.popViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
             
         } else {
             
@@ -99,3 +101,5 @@ class NewItemTableViewController: UITableViewController, UITextFieldDelegate {
     
     
 }
+
+

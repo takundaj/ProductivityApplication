@@ -6,7 +6,6 @@
 //  Copyright © 2021 TETRA. All rights reserved.
 //
 import CoreData
-
 import UIKit
 
 class JournalHomeTableViewController: UITableViewController {
